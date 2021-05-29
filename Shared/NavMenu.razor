@@ -1,0 +1,82 @@
+﻿<div class="top-row navbar navbar-dark">
+    <a class="navbar-brand ml-3 mr-sm-auto ml-sm-auto my-auto" style="font-size: 25px;" href="">Mateusz Kost</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <img src="/jpg/monkey.jpg" class="ml-4 mt-3 " asp-append-version="true" alt="monkey" style="width: 200px; height: 200px; border-radius: 50%;" />
+    <hr style="background-color:white; height: 0.5px; margin-left: 15px; margin-right: 15px;" />
+    <ul class="nav flex-column my-auto mx-auto">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> HOME
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> ABOUT ME
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> RESUME
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" @onclick="()=>IsClicked()">
+                <span class="oi oi-list-rich" aria-hidden="false"></span> PROJECTS
+            </NavLink>
+            <ul class="nav flex-column">
+                @if (clicked == true)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" @onclick="()=>IsClicked2()">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> first
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" @onclick="()=>IsClicked2()">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> second
+                        </NavLink>
+                    </li>
+                }
+
+
+            </ul>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> CONTACT
+            </NavLink>
+        </li>
+    </ul>
+    <footer class="navbar-text px-4 my-md-5" style="color:white;"> &copy; Mateusz Kost 2021</footer>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private bool clicked = false;
+
+    public void IsClicked()
+    {
+        if (clicked == true)
+            clicked = false;
+        else
+            clicked = true;
+    }
+
+    public void IsClicked2()
+    {
+        clicked = false;
+    }
+}
