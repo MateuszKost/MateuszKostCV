@@ -1,7 +1,58 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<div class="container">
+    <p class="typewriter mx-auto">
+        <span id="me">
+            Hi, I am  <span id="name">Mateusz Kost</span>
+        </span>
+    <p>
+        <span class="typewriter-text">@typewriterText</span>
+    </p>
+    </p>
+</div>
 
-Welcome to your new app.
+@code {
+    string[] jobs = { "I'm a dancer. ", "I'm a student. ", "I'm a designer. ", "I'm a future web-developer. " };
+    string typewriterText;
+    Task worker;
+    protected override void OnInitialized()
+    {
+        worker = Typewriter();
+    }
+    async Task Typewriter()
+    {
+        var index = 0;
+        while (true)
+        {
+            var textIndex = 1;
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+            while (textIndex < jobs[index].Length + 1)
+            {
+                typewriterText = jobs[index].Substring(0, textIndex);
+                textIndex++;
+                StateHasChanged();
+                await Task.Delay(150);
+            };
+
+            StateHasChanged();
+            await Task.Delay(2000);
+
+            textIndex = jobs[index].Length;
+
+            while (textIndex + 1 > 0)
+            {
+                typewriterText = jobs[index].Substring(0, textIndex);
+                textIndex--;
+                StateHasChanged();
+                await Task.Delay(150);
+            };
+
+            index++;
+            if (index == jobs.Length)
+            {
+                index = 0;
+            }
+        }
+    }
+}
+

@@ -2,18 +2,24 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(to right top, #051937, #002f4a, #004449, #005536, #4e6221);
+    min-height: 100vh;
+    border-style: none none none none;
 }
 
 .main {
     flex: 1;
 }
 
+.content {
+    min-height: 95vh;
+    color: white;
+}
+
 .sidebar {
-    background-image: linear-gradient(#f6f1d3, #648880 85%, #293f50);
-    border-style: none none none none;
     border-color: white;
     border-width: thin;
-    height: auto
+    height: auto;
 }
 
 .top-row {
@@ -36,6 +42,15 @@
     }
 
 @media (max-width: 640.98px) {
+
+    .sidebar {
+        border-style: none none solid none;
+    }
+
+    .content {
+        min-height: 85vh;
+    }
+
     .top-row:not(.auth) {
         display: none;
     }
@@ -57,7 +72,6 @@
     .sidebar {
         border-style: none solid none none;
         width: 250px;
-        height: 100vh;
         position: sticky;
         top: 0;
     }

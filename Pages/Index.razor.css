@@ -1,0 +1,27 @@
+﻿.typewriter {
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 35vh;
+    margin-bottom: 45vh;
+}
+
+#me {
+    font-size: 6vw;
+}
+
+#name {
+    font-size: 6vw;
+    color: #222425;
+}
+
+@media (min-width: 641px) {
+    .typewriter {
+        font-size: 3vw;
+    }
+
+    #me, #name {
+        font-size: 4vw;
+    }
+}
+
+

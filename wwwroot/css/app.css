@@ -1,11 +1,5 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-.page {
-    background-image: linear-gradient(#f6f1d3, #648880 85%, #293f50);
-    min-height: 100vh;
-    border-style: none;
-}
-
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
