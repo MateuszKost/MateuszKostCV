@@ -69,11 +69,17 @@
         flex-direction: row;
     }
 
+    .main {
+        margin-left: 250px;
+    }
+
     .sidebar {
         border-style: none solid none none;
         width: 250px;
-        position: sticky;
+        position: fixed;
         top: 0;
+        bottom: 0;
+        overflow: auto;
     }
 
     .top-row {
