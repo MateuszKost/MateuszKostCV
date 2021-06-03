@@ -1,0 +1,50 @@
+﻿.informations {
+    max-width: 1120px;
+    text-align: justify;
+    margin-top: 8vh;
+}
+
+@media(max-width: 640.98px) {
+    #title {
+        font-size: 18px;
+    }
+
+    #text {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 768px) {
+    #title {
+        font-size: 22px;
+    }
+
+    #text {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1200px) {
+    #title {
+        font-size: 30px;
+    }
+
+    #text {
+        font-size: 25px;
+    }
+}
+
+.timeline {
+    margin-top: 8vh;
+}
+
+.work {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-style: solid;
+    max-width: 520px;
+}
+
+.date {
+}

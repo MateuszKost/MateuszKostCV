@@ -1,16 +1,53 @@
 ﻿@page "/about-me"
 
-<h1>Counter</h1>
+<div class="container">
+    <div class="informations">
+        <p id="title">Hello, my name is Mateusz Kost</p>
+        <p id="text">
+            I am now a third-year student of Computer Science at the Silesian University of Technology, who wants to find his first job connected with ptrogramming.
+            Everyday I work hard on expanding my knowledge in Computer Science. Currently I'm working with .Net and it's framework Blazor.
+            In my projects im using such technologies as HTML, CSS which helps me in creating a web applications. In future I want to learn
+            other frameworks like Angular or React.
+        </p>
+    </div>
 
-<p>Current count: @currentCount</p>
+    <div class="timeline">
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+        <p id="title" style="text-align: center">Education</p>
+
+        <div class="work">
+            <div class="date">2018-2022</div>
+            Silesian University of technology Computer Science
+        </div>
+
+        <br />
+
+        <div class="work">
+            <div class="date">2015 - 2018</div>
+            1 liceum ogólnokształcące im. Leona Kruczkowskiego w Tychach
+        </div>
+
+        <br />
+
+        <p id="title" style="text-align: center">Work</p>
+
+        <div class="work">
+            <div class="date">III 2020 - now</div>
+            Mathematics tutor in Centrum Nauki i Zabawy okiDoki
+        </div>
+
+        <br />
+
+        <div class="work">
+            <div class="date">VI 2018 - VII 2018</div>
+            Warehouseman in Lear corporation
+        </div>
+
+        <br />
+
+    </div>
+
+</div>
 
 @code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
 }
