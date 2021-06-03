@@ -1,34 +1,19 @@
 ﻿.skills {
     text-align: center;
-    max-width: 1140px;
-    margin: auto auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 85vh;
+    height: auto;
 }
 
 img {
     margin-bottom: 20px;
-}
-
-@media (max-width: 575px ) {
-    img {
-        max-width: 220px;
-    }
-}
-
-@media (min-width: 992px ) {
-    .outer {
-        display: table;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        padding-left: 250px;
-    }
-
-    .middle {
-        display: table-cell;
-        vertical-align: middle;
-    }
+    max-width: 220px;
 }
 
 
