@@ -12,7 +12,7 @@
 </div>
 
 @code {
-    string[] jobs = { "I'm a dancer. ", "I'm a student. ", "I'm a designer. ", "I'm a future web-developer. " };
+    string[] jobs = {"I'm a student. ", "I'm a designer. ", "I'm a future web-developer. " };
     string typewriterText;
     Task worker;
     protected override void OnInitialized()
@@ -35,7 +35,7 @@
             };
 
             StateHasChanged();
-            await Task.Delay(2000);
+            await Task.Delay(500);
 
             textIndex = jobs[index].Length;
 
